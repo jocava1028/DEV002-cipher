@@ -1,6 +1,6 @@
 import cipher from './cipher.js';
 
-console.log(cipher);
+
 // guardo los elementos en variables
 const inputNumerico = document.getElementById("input-numero");
 const inputCifrado = document.getElementById("input-cifrado");
@@ -14,12 +14,13 @@ let msjDescifrado
 botonCifrar.addEventListener("click", () => {
     botonCifrar.style.display = "none"
     botonDescifrar.style.display = "block"
+    cipher.funcionCifrar(msjDescifrado, offset) // llamar al metodo cifrar del objeto cipher
 })
 botonDescifrar.addEventListener("click", () => {
     botonCifrar.style.display = "block"
     botonDescifrar.style.display = "none"
 })
-inputNumerico.addEventListener("keyup", ( e) =>{ 
+inputNumerico.addEventListener("change", ( e) =>{ 
     console.log("valor:", e.target.value)
     offset= e.target.value  
 })
