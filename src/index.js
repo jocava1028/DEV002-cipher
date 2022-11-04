@@ -13,11 +13,11 @@ let msjCifrado
 let msjDescifrado
 botonCifrar.addEventListener("click", () => {
     botonCifrar.style.display = "none"
-    botonDescifrar.style.display = "block"
+    botonDescifrar.style.display = "inline-block"
     cipher.funcionCifrar(msjDescifrado, offset) // llamar al metodo cifrar del objeto cipher
 })
 botonDescifrar.addEventListener("click", () => {
-    botonCifrar.style.display = "block"
+    botonCifrar.style.display = "inline-block"
     botonDescifrar.style.display = "none"
 })
 inputNumerico.addEventListener("change", ( e) =>{ 

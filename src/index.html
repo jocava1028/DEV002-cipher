@@ -4,24 +4,36 @@
     <meta charset="utf-8">
     <title>ACÁ ENTRE NOS</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="root">
-      <img src="media/Logo.png" alt="media/Logo.png">
+      <img src="media/Logo.png" alt="logo acá entre nos">
+    </div>
+    
+    <div >
+      <h2>Seleciona la clave para cifrar</h2>
+      <input type="number" min="1" max="26" placeholder="1" id ="input-numero">
+    </div>
+    <div id="contenedor">
+      <div>
+        <h3>Escribe tu mensaje</h3>
+        <input type="text" id="input-descifrado">
+      </div>
+      <div id="contenedor-top-secret"> 
+        <img  id="top-secret"src="media/topsecret.png" alt="top secret">
+      </div>
+      <div>
+        <h3>Mensaje cifrado</h3>
+        <input type="text" name="cifrar" id="input-cifrado">
+      </div>
     </div>
     <div>
-    <h2>Seleciona la clave para cifrar</h2>
-    <input type="number" min="1" max="20" id ="input-numero"></div>
-    <div>
-      <h3>Escribe tu mensaje</h3>
-      <input type="text" id="input-descifrado">
+      <button class="boton" id="boton-cifrar">Cifrar</button>
+      <button class="boton" id="boton-descifrar">Descifrar</button>
     </div>
-    <div>
-      <h3>Mensaje cifrado</h3>
-      <input type="text" name="cifrar" id="input-cifrado">
-    </div>
-    <button class="boton" id="boton-cifrar">Cifrar</button>
-    <button class="boton" id="boton-descifrar">Descifrar</button>
     
     
 

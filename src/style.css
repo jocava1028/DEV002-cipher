@@ -1,4 +1,68 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: #88EBE5;
+    font-family: 'Fontdiner Swanky';
+    font-style:"cursive";
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
 #boton-descifrar{
     display: none;
+    background-color: #55FF88;
+    border-color: #1E6C2B;
+    border-radius: 10px;
+    font-family: 'Fontdiner Swanky';
+    font-style:"cursive";
+   
 
 }
+
+#boton-cifrar{
+    background-color:#55FF88;
+    border-color: #1E6C2B;
+    border-radius: 10px;
+    font-family: 'Fontdiner Swanky';
+    font-style:"cursive";
+}
+
+#input-numero{
+    background-color: #55FF88;
+    border-color: #1E6C2B;
+  
+             
+}
+#input-cifrado{
+    background-color:#E5A5F5;
+    border-color: #71236D;
+    border-radius: 30px;
+    height:  200px;
+    width: 284px;
+}
+
+#input-descifrado{
+    background-color: #E5A5F5;
+    border-color: #71236D;
+    border-radius: 30px;
+    height:  200px;
+    width: 284px;
+}
+
+#top-secret{
+    height:  150px;
+    width: 200px; 
+    align-self: center;
+}
+
+#contenedor-top-secret{
+    display: flex;
+}
+
+
