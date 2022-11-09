@@ -21,6 +21,7 @@ html, body {
     border-radius: 10px;
     font-family: 'Fontdiner Swanky';
     font-style:"cursive";
+    
    
 
 }
@@ -31,6 +32,15 @@ html, body {
     border-radius: 10px;
     font-family: 'Fontdiner Swanky';
     font-style:"cursive";
+}
+
+#boton-limpiar{
+    background-color: #55FF88;
+    border-color: #1E6C2B;
+    border-radius: 10px;
+    font-family: 'Fontdiner Swanky';
+    font-style:"cursive"; 
+    
 }
 
 #input-numero{

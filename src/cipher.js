@@ -1,30 +1,30 @@
 const cipher = {
-funcionCifrar: (texto, numero) =>{
+encode: (offset, string) =>{
   // texto es el mensaje que escribe el usuario
   //numero es el deplazamiento que elije el usuario
   
-    if (!texto) return "";
+    if (!string) return "";
     const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    texto = texto.toUpperCase();
-    numero = (numero % 26 + 26) %26;
-    const resultado= texto.replace(/[A-Z]/ig, (letra)=> {
-      return letras[(letras.indexOf(letra)+numero)%26]
+    string = string.toUpperCase();
+    offset = (offset % 26 + 26) %26;
+    const resultado= string.replace(/[A-Z]/ig, (letra)=> {
+      return letras[(letras.indexOf(letra)+offset)%26]
     });
 
     return resultado;
     
 },
 
-funcionDescifrar: (texto, numero) =>{
+decode: (offset, string) =>{
   
-    if (!texto) return "";
+    if (!string) return "";
     const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    texto = texto.toUpperCase();
+    string = string.toUpperCase();
 
-    numero = (numero % 26 - 26) %26;
+    offset = (offset % 26 - 26) %26;
 
-    const resultado= texto.replace(/[A-Z]/ig, (letra)=> {
-      return letras[(letras.indexOf(letra)-numero)%26]
+    const resultado= string.replace(/[A-Z]/ig, (letra)=> {
+      return letras[(letras.indexOf(letra)-offset)%26]
     });
 
     return resultado;
