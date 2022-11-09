@@ -8,7 +8,12 @@ Acá entre nos
 
 ## Tabla de contenido
 
-[TOC]
+- Proceso y decisiones del diseño
+- Prototipo
+- Quienes son los usuarixs que van a usar el producto?
+- Problemas, necesidades y soluciones
+- Producto final
+- Recursos
 
 ## Proceso y decisiones del diseño
 
