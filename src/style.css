@@ -15,7 +15,7 @@ html, body {
 }
 
 #boton-descifrar{
-    display: none;
+    /* display: none; */
     background-color: #55FF88;
     border-color: #1E6C2B;
     border-radius: 10px;

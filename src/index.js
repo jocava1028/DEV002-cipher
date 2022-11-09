@@ -11,14 +11,24 @@ const botonDescifrar = document. getElementById("boton-descifrar");
 let offset
 let msjCifrado
 let msjDescifrado
+let resultadoCifrado
+let resultadoDescifrado
 botonCifrar.addEventListener("click", () => {
-    botonCifrar.style.display = "none"
-    botonDescifrar.style.display = "inline-block"
-    cipher.funcionCifrar(msjDescifrado, offset) // llamar al metodo cifrar del objeto cipher
+   // botonCifrar.style.display = "none"
+    //botonDescifrar.style.display = "inline-block"
+    resultadoCifrado = cipher.funcionCifrar(msjDescifrado, offset) // llamar al metodo cifrar del objeto cipher
+    if(!msjCifrado || msjCifrado===""){
+        inputCifrado.value=resultadoCifrado
+    }
 })
 botonDescifrar.addEventListener("click", () => {
-    botonCifrar.style.display = "inline-block"
-    botonDescifrar.style.display = "none"
+   // botonCifrar.style.display = "inline-block"
+   // botonDescifrar.style.display = "none"
+    resultadoDescifrado = cipher.funcionDescifrar(msjCifrado, offset) // llamar al metodo descifrar del objeto cipher
+    if(!msjDescifrado|| msjDescifrado===""){
+        inputDescifrado.value=resultadoDescifrado
+    }
+
 })
 inputNumerico.addEventListener("change", ( e) =>{ 
     console.log("valor:", e.target.value)
