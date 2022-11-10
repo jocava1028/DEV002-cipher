@@ -1,35 +1,48 @@
 const cipher = {
-encode: (offset, string) =>{
-  // texto es el mensaje que escribe el usuario
-  //numero es el deplazamiento que elije el usuario
-  
-    if (!string) return "";
-    const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string = string.toUpperCase();
-    offset = (offset % 26 + 26) %26;
-    const resultado= string.replace(/[A-Z]/ig, (letra)=> {
-      return letras[(letras.indexOf(letra)+offset)%26]
-    });
 
-    return resultado;
-    
-},
+  encode: (offset, string) => {
+    let tipos = typeof offset !== "number" || typeof string !== "string";
+    let vacios = (offset === (null || 0)) || (string === undefined);
 
-decode: (offset, string) =>{
-  
-    if (!string) return "";
-    const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string = string.toUpperCase();
+    if (tipos || vacios) {
+      throw TypeError()
+    }
+    // texto es el mensaje que escribe el usuario
+    //numero es el deplazamiento que elije el usuario
 
-    offset = (offset % 26 - 26) %26;
+    else {
+      const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      string = string.toUpperCase();
+      offset = (offset % 26 + 26) % 26;
+      const resultado = string.replace(/[A-Z]/ig, (letra) => {
+        return letras[(letras.indexOf(letra) + offset) % 26]
+      });
 
-    const resultado= string.replace(/[A-Z]/ig, (letra)=> {
-      return letras[(letras.indexOf(letra)-offset)%26]
-    });
+      return resultado;
+    }
+  },
 
-    return resultado;
+  decode: (offset, string) => {
+    let tipos = typeof offset !== "number" || typeof string !== "string";
+    let vacios = (offset === (null || 0)) || (string === undefined);
+    if (tipos || vacios) {
+      throw TypeError()
+    }
 
-}
+    else {
+      const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      string = string.toUpperCase();
+
+      offset = (offset % 26 - 26) % 26;
+
+      const resultado = string.replace(/[A-Z]/ig, (letra) => {
+        return letras[(letras.indexOf(letra) - offset) % 26]
+      });
+
+      return resultado;
+
+    }
+  }
 }
 
 
